@@ -12,6 +12,7 @@ namespace CSH_CountdownTimer
 {
     public partial class Form1 : Form
     {
+        int preostaleSekunde;
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +32,13 @@ namespace CSH_CountdownTimer
             {
                 comboBox2.Items.Add(i.ToString());
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int minute = int.Parse(comboBox1.Text);
+            int sekunde = int.Parse(comboBox2.Text);
+            preostaleSekunde = minute * 60 + sekunde;
         }
     }
 }
