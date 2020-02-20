@@ -139,5 +139,27 @@ namespace CSH_CountdownTimer
                 timerStop();
             }
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if(keyData == Keys.Space)
+            {
+                if (timer1.Enabled)
+                {
+                    timerStop();
+                    label1.Visible = true;
+                }
+                else
+                    timerStart();
+                return true;
+            }
+            if(keyData == Keys.Escape)
+            {
+                timerStop();
+                normalniEkran();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }
