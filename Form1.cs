@@ -34,14 +34,23 @@ namespace CSH_CountdownTimer
             }
         }
 
+        private void normalniEkran()
+        {
+            FormBorderStyle = FormBorderStyle.Sizable;
+            WindowState = FormWindowState.Normal;
+            TopMost = false;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            button1.Visible = true;
+        }
         private void maksimiziraniEkran()
         {
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             //TopMost = true;
-            comboBox1.Visible = true;
-            comboBox2.Visible = true;
-            button1.Visible = true;
+            comboBox1.Visible = false;
+            comboBox2.Visible = false;
+            button1.Visible = false;
 
         }
 
@@ -58,7 +67,7 @@ namespace CSH_CountdownTimer
             }
             else
             {
-                normalanEkran();
+                normalniEkran();
             }
         }
 
