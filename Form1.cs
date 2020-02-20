@@ -94,6 +94,11 @@ namespace CSH_CountdownTimer
             timer1.Start();
         }
 
+        private void timerStop()
+        {
+            timer1.Stop();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (timer1.Interval == 1000)
@@ -125,6 +130,13 @@ namespace CSH_CountdownTimer
                 label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
                 timer1.Interval = 500;
                 label1.Visible = (!label1.Visible);
+            }
+
+            if(preostaleSekunde == 0)
+            {
+                label1.Visible = true;
+                label1.Text = "Kraj!";
+                timerStop();
             }
         }
     }
