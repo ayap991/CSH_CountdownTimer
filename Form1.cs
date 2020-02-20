@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace CSH_CountdownTimer
 {
@@ -15,6 +16,9 @@ namespace CSH_CountdownTimer
         int preostaleSekunde;
         int sekundeBlinkanja = 300;
         int flag = 1;
+        SoundPlayer zadnjihPet = new SoundPlayer(CSH_CountdownTimer.Properties.Resources.zadnjihPet5);
+        SoundPlayer kraj = new SoundPlayer(CSH_CountdownTimer.Properties.Resources.kraj);
+        
         public Form1()
         {
             InitializeComponent();
@@ -130,11 +134,14 @@ namespace CSH_CountdownTimer
                 label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
                 timer1.Interval = 500;
                 label1.Visible = (!label1.Visible);
+                if (label1.Visible)
+                    zadnjihPet.Play();
             }
 
             if(preostaleSekunde == 0)
             {
                 label1.Visible = true;
+                kraj.Play();
                 label1.Text = "Kraj!";
                 timerStop();
             }
