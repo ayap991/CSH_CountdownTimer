@@ -14,6 +14,7 @@ namespace CSH_CountdownTimer
     {
         int preostaleSekunde;
         int sekundeBlinkanja = 300;
+        int flag = 1;
         public Form1()
         {
             InitializeComponent();
@@ -94,7 +95,36 @@ namespace CSH_CountdownTimer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (timer1.Interval == 1000)
+            {
+                --preostaleSekunde;
+            }
+            else
+            {
+                if (flag == 0)
+                    flag++;
+                else
+                {
+                    --preostaleSekunde;
+                    flag = 0;
+                }
+            }
 
+            if(preostaleSekunde > sekundeBlinkanja)
+            {
+                label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
+            }
+            else if(preostaleSekunde == sekundeBlinkanja)
+            {
+                label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
+                timer1.Interval = 500;
+            }
+            else
+            {
+                label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
+                timer1.Interval = 500;
+                label1.Visible = (!label1.Visible);
+            }
         }
     }
 }
