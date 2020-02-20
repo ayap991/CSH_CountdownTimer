@@ -72,9 +72,9 @@ namespace CSH_CountdownTimer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream zadnjihPet5 {
+        internal static System.IO.UnmanagedMemoryStream zadnjih5 {
             get {
-                return ResourceManager.GetStream("zadnjihPet5", resourceCulture);
+                return ResourceManager.GetStream("zadnjih5", resourceCulture);
             }
         }
     }

@@ -84,7 +84,7 @@
     <None Include="Resources\kraj.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\zadnjihPet5.wav" />
+    <None Include="Resources\zadnjih5.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

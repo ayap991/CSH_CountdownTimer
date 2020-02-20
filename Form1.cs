@@ -16,29 +16,25 @@ namespace CSH_CountdownTimer
         int preostaleSekunde;
         int sekundeBlinkanja = 300;
         int flag = 1;
-        SoundPlayer zadnjihPet = new SoundPlayer(CSH_CountdownTimer.Properties.Resources.zadnjihPet5);
+        SoundPlayer zadnjihPet = new SoundPlayer(CSH_CountdownTimer.Properties.Resources.zadnjih5);
         SoundPlayer kraj = new SoundPlayer(CSH_CountdownTimer.Properties.Resources.kraj);
         
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void comboBox1OnClick(object sender, EventArgs e)
-        {
-            for(int i=0; i <= 30; i++)
+            for (int i = 0; i <= 30; i++)
             {
                 comboBox1.Items.Add(i.ToString());
             }
-        }
 
-        private void comboBox2OnClick(object sender, EventArgs e)
-        {
             for (int i = 0; i <= 60; i++)
             {
                 comboBox2.Items.Add(i.ToString());
             }
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
         }
+
 
         private void normalniEkran()
         {

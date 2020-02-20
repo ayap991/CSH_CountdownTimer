@@ -43,7 +43,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(57, 21);
             this.comboBox1.TabIndex = 0;
-            this.comboBox1.Click += new System.EventHandler(this.comboBox1OnClick);
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+           // this.comboBox1.Click += new System.EventHandler(this.comboBox1OnClick);
             // 
             // comboBox2
             // 
@@ -52,7 +53,8 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(56, 21);
             this.comboBox2.TabIndex = 1;
-            this.comboBox2.Click += new System.EventHandler(this.comboBox2OnClick);
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            //this.comboBox2.Click += new System.EventHandler(this.comboBox2OnClick);
             // 
             // button1
             // 
