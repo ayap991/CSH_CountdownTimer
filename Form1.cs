@@ -54,7 +54,7 @@ namespace CSH_CountdownTimer
         {
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            //TopMost = true;
+            TopMost = true;
             comboBox1.Visible = false;
             comboBox2.Visible = false;
             button1.Visible = false;
