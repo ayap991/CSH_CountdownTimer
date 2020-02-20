@@ -34,11 +34,37 @@ namespace CSH_CountdownTimer
             }
         }
 
+        private void maksimiziraniEkran()
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            //TopMost = true;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            button1.Visible = true;
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             int minute = int.Parse(comboBox1.Text);
             int sekunde = int.Parse(comboBox2.Text);
             preostaleSekunde = minute * 60 + sekunde;
+
+            if(preostaleSekunde > 0)
+            {
+                timerStart();
+                maksimiziraniEkran();
+            }
+            else
+            {
+                normalanEkran();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
