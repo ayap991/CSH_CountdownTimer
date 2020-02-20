@@ -16,5 +16,21 @@ namespace CSH_CountdownTimer
         {
             InitializeComponent();
         }
+
+        private void comboBox1OnClick(object sender, EventArgs e)
+        {
+            for(int i=0; i <= 30; i++)
+            {
+                comboBox1.Items.Add(i.ToString());
+            }
+        }
+
+        private void comboBox2OnClick(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= 60; i++)
+            {
+                comboBox2.Items.Add(i.ToString());
+            }
+        }
     }
 }

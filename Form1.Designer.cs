@@ -35,32 +35,26 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            for (int i = 0; i <= 30; i++)
-            {
-                this.comboBox1.Items.Add(i.ToString());
-            }
             this.comboBox1.Location = new System.Drawing.Point(31, 35);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(57, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1OnClick);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            for (int i = 0; i <= 60; i++)
-            {
-                this.comboBox2.Items.Add(i.ToString());
-            }
             this.comboBox2.Location = new System.Drawing.Point(110, 35);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(56, 21);
             this.comboBox2.TabIndex = 1;
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2OnClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(211, 198);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
