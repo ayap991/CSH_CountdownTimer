@@ -13,6 +13,7 @@ namespace CSH_CountdownTimer
     public partial class Form1 : Form
     {
         int preostaleSekunde;
+        int sekundeBlinkanja = 300;
         public Form1()
         {
             InitializeComponent();
@@ -68,6 +69,14 @@ namespace CSH_CountdownTimer
             else
             {
                 normalniEkran();
+            }
+        }
+
+        private void timerStart()
+        {
+            if(preostaleSekunde > sekundeBlinkanja)
+            {
+               
             }
         }
 
