@@ -89,6 +89,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

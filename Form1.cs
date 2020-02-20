@@ -44,6 +44,7 @@ namespace CSH_CountdownTimer
             comboBox1.Visible = true;
             comboBox2.Visible = true;
             button1.Visible = true;
+            label1.Visible = false;
         }
         private void maksimiziraniEkran()
         {
@@ -53,7 +54,7 @@ namespace CSH_CountdownTimer
             comboBox1.Visible = false;
             comboBox2.Visible = false;
             button1.Visible = false;
-
+            label1.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
