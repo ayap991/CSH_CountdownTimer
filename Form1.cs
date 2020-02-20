@@ -76,8 +76,20 @@ namespace CSH_CountdownTimer
         {
             if(preostaleSekunde > sekundeBlinkanja)
             {
-               
+                label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
+                timer1.Interval = 1000;
             }
+            else if(preostaleSekunde == sekundeBlinkanja)
+            {
+                label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
+                timer1.Interval = 500;
+            }
+            else
+            {
+                label1.Text = TimeSpan.FromSeconds(preostaleSekunde).ToString(@"mm\:ss");
+                timer1.Interval = 500;
+            }
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
